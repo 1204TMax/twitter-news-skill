@@ -1,0 +1,222 @@
+{
+  "updatedAt": "2026-02-24T16:36:42+08:00",
+  "source": "following-handles.txt",
+  "accounts": [
+    {
+      "handle": "AIatMeta",
+      "profileUrl": "https://x.com/AIatMeta",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "AnthropicAI",
+      "profileUrl": "https://x.com/AnthropicAI",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "claudeai",
+      "profileUrl": "https://x.com/claudeai",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "deepseek_ai",
+      "profileUrl": "https://x.com/deepseek_ai",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "GoogleAI",
+      "profileUrl": "https://x.com/GoogleAI",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "huggingface",
+      "profileUrl": "https://x.com/huggingface",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "ilyasut",
+      "profileUrl": "https://x.com/ilyasut",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "karpathy",
+      "profileUrl": "https://x.com/karpathy",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "MistralAI",
+      "profileUrl": "https://x.com/MistralAI",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "NVIDIAAI",
+      "profileUrl": "https://x.com/NVIDIAAI",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "OpenAI",
+      "profileUrl": "https://x.com/OpenAI",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "sama",
+      "profileUrl": "https://x.com/sama",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "AiBreakfast",
+      "profileUrl": "https://x.com/AiBreakfast",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "AIPRMcorp",
+      "profileUrl": "https://x.com/AIPRMcorp",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "berkeley_ai",
+      "profileUrl": "https://x.com/berkeley_ai",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "calai_app",
+      "profileUrl": "https://x.com/calai_app",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "gmail",
+      "profileUrl": "https://x.com/gmail",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "LumaLabsAI",
+      "profileUrl": "https://x.com/LumaLabsAI",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "Med1_Ai",
+      "profileUrl": "https://x.com/Med1_Ai",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "PyTorch",
+      "profileUrl": "https://x.com/PyTorch",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "Sider_AI",
+      "profileUrl": "https://x.com/Sider_AI",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "StabilityAI",
+      "profileUrl": "https://x.com/StabilityAI",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "therundownai",
+      "profileUrl": "https://x.com/therundownai",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "websim_ai",
+      "profileUrl": "https://x.com/websim_ai",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    }
+  ]
+}
