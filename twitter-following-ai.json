@@ -1,10 +1,19 @@
 {
-  "updatedAt": "2026-02-24T16:36:42+08:00",
+  "updatedAt": "2026-03-10T00:36:43+08:00",
   "source": "following-handles.txt",
   "accounts": [
     {
       "handle": "AIatMeta",
       "profileUrl": "https://x.com/AIatMeta",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "AndrewYNg",
+      "profileUrl": "https://x.com/AndrewYNg",
       "priority": 1,
       "active": true,
       "lastSeenPostTime": null,
@@ -30,6 +39,24 @@
       "lastCheckedAt": null
     },
     {
+      "handle": "cohere",
+      "profileUrl": "https://x.com/cohere",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "databricks",
+      "profileUrl": "https://x.com/databricks",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
       "handle": "deepseek_ai",
       "profileUrl": "https://x.com/deepseek_ai",
       "priority": 1,
@@ -39,8 +66,8 @@
       "lastCheckedAt": null
     },
     {
-      "handle": "GoogleAI",
-      "profileUrl": "https://x.com/GoogleAI",
+      "handle": "GoogleDeepMind",
+      "profileUrl": "https://x.com/GoogleDeepMind",
       "priority": 1,
       "active": true,
       "lastSeenPostTime": null,
@@ -102,6 +129,15 @@
       "lastCheckedAt": null
     },
     {
+      "handle": "perplexity_ai",
+      "profileUrl": "https://x.com/perplexity_ai",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
       "handle": "sama",
       "profileUrl": "https://x.com/sama",
       "priority": 1,
@@ -111,18 +147,27 @@
       "lastCheckedAt": null
     },
     {
-      "handle": "AiBreakfast",
-      "profileUrl": "https://x.com/AiBreakfast",
-      "priority": 2,
+      "handle": "scale_ai",
+      "profileUrl": "https://x.com/scale_ai",
+      "priority": 1,
       "active": true,
       "lastSeenPostTime": null,
       "lastSeenPostId": null,
       "lastCheckedAt": null
     },
     {
-      "handle": "AIPRMcorp",
-      "profileUrl": "https://x.com/AIPRMcorp",
-      "priority": 2,
+      "handle": "xai",
+      "profileUrl": "https://x.com/xai",
+      "priority": 1,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "ylecun",
+      "profileUrl": "https://x.com/ylecun",
+      "priority": 1,
       "active": true,
       "lastSeenPostTime": null,
       "lastSeenPostId": null,
@@ -138,8 +183,8 @@
       "lastCheckedAt": null
     },
     {
-      "handle": "calai_app",
-      "profileUrl": "https://x.com/calai_app",
+      "handle": "BillGates",
+      "profileUrl": "https://x.com/BillGates",
       "priority": 2,
       "active": true,
       "lastSeenPostTime": null,
@@ -147,8 +192,8 @@
       "lastCheckedAt": null
     },
     {
-      "handle": "gmail",
-      "profileUrl": "https://x.com/gmail",
+      "handle": "elonmusk",
+      "profileUrl": "https://x.com/elonmusk",
       "priority": 2,
       "active": true,
       "lastSeenPostTime": null,
@@ -165,8 +210,8 @@
       "lastCheckedAt": null
     },
     {
-      "handle": "Med1_Ai",
-      "profileUrl": "https://x.com/Med1_Ai",
+      "handle": "naval",
+      "profileUrl": "https://x.com/naval",
       "priority": 2,
       "active": true,
       "lastSeenPostTime": null,
@@ -183,8 +228,17 @@
       "lastCheckedAt": null
     },
     {
-      "handle": "Sider_AI",
-      "profileUrl": "https://x.com/Sider_AI",
+      "handle": "reidhoffman",
+      "profileUrl": "https://x.com/reidhoffman",
+      "priority": 2,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null
+    },
+    {
+      "handle": "satyanadella",
+      "profileUrl": "https://x.com/satyanadella",
       "priority": 2,
       "active": true,
       "lastSeenPostTime": null,
@@ -201,8 +255,8 @@
       "lastCheckedAt": null
     },
     {
-      "handle": "therundownai",
-      "profileUrl": "https://x.com/therundownai",
+      "handle": "sundarpichai",
+      "profileUrl": "https://x.com/sundarpichai",
       "priority": 2,
       "active": true,
       "lastSeenPostTime": null,
@@ -210,13 +264,43 @@
       "lastCheckedAt": null
     },
     {
-      "handle": "websim_ai",
-      "profileUrl": "https://x.com/websim_ai",
+      "handle": "tim_cook",
+      "profileUrl": "https://x.com/tim_cook",
       "priority": 2,
       "active": true,
       "lastSeenPostTime": null,
       "lastSeenPostId": null,
       "lastCheckedAt": null
+    },
+    {
+      "handle": "GoogleAI",
+      "profileUrl": "https://x.com/GoogleAI",
+      "priority": 3,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null,
+      "watchOnly": true
+    },
+    {
+      "handle": "Microsoft",
+      "profileUrl": "https://x.com/Microsoft",
+      "priority": 3,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null,
+      "watchOnly": true
+    },
+    {
+      "handle": "nvidia",
+      "profileUrl": "https://x.com/nvidia",
+      "priority": 3,
+      "active": true,
+      "lastSeenPostTime": null,
+      "lastSeenPostId": null,
+      "lastCheckedAt": null,
+      "watchOnly": true
     }
   ]
 }
