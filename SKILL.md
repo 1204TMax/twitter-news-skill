@@ -15,13 +15,14 @@ description: Twitter/X 专属资讯快照工作流：按账号池分批抓取新
 
 ## 强制规则
 1. 必须使用 `browser` 作为主抓取工具。
-2. 必须遍历账号池 `active=true` 账号。
-3. 必须按批执行：**worker 池并发抓取**（默认并发 6，每个 worker 一次处理 1 个账号）。
-4. 必须分批提交结果并落盘 checkpoint（每完成一轮 worker 汇总就落盘）。
-5. 必须支持断点续跑：从 `nextIndex` 继续。
-6. 必须在**同一次任务中循环批次**，直到 `nextIndex >= totalActiveAccounts` 才能结束。
-7. 必须输出“账号检查清单”。
-8. 不得编造帖子；无数据就明确写无。
+2. 抓取前必须先做**登录态检查**；若未登录，先执行登录，再开始抓取。
+3. 必须遍历账号池 `active=true` 账号。
+4. 必须按批执行：**worker 池并发抓取**（默认并发 6，每个 worker 一次处理 1 个账号）。
+5. 必须分批提交结果并落盘 checkpoint（每完成一轮 worker 汇总就落盘）。
+6. 必须支持断点续跑：从 `nextIndex` 继续。
+7. 必须在**同一次任务中循环批次**，直到 `nextIndex >= totalActiveAccounts` 才能结束。
+8. 必须输出“账号检查清单”。
+9. 不得编造帖子；无数据就明确写无。
 
 ## 时间窗口
 - 起始：昨天 09:30（Asia/Shanghai）
@@ -37,6 +38,8 @@ description: Twitter/X 专属资讯快照工作流：按账号池分批抓取新
 
 ### Step 0：初始化
 - 读取账号池、状态文件。
+- 先执行登录态检查（例如检查是否出现登录按钮/是否可见完整时间线）。
+- 若未登录：先完成登录流程，再继续后续步骤。
 - 加载 checkpoint；若不存在则创建：
 
 ```json
@@ -71,14 +74,19 @@ description: Twitter/X 专属资讯快照工作流：按账号池分批抓取新
 每一轮并发 worker 回收后，立即写 `twitter-checkpoint.json`：
 - `nextIndex`（队列消费进度）
 - `completedAccounts`
-- `failedAccounts`
+- `failedAccounts`（仅真实失败：超时/解析失败/登录受限）
+- `pendingAccounts`（尚未执行，不得记入 failed）
 - 当前累计 `items`
 - `lastBatchFinishedAt`
 - `concurrency`
 
 并立刻判断：
-- 若 `nextIndex < totalActiveAccounts`：继续下一轮 worker（同一任务内继续循环）
+- 若 `nextIndex < totalActiveAccounts`：继续下一轮 worker（同一任务内继续循环），**禁止结束任务**
 - 若 `nextIndex >= totalActiveAccounts`：进入汇总阶段
+
+退出硬规则：
+- 当 `nextIndex < totalActiveAccounts` 时，禁止写入“整轮中断后全量 skipped”。
+- 当 `nextIndex < totalActiveAccounts` 时，禁止返回最终完成态。
 
 ### Step 4：断点续跑
 - 重新执行时先读 checkpoint。
@@ -93,7 +101,7 @@ description: Twitter/X 专属资讯快照工作流：按账号池分批抓取新
   - handle
   - checked（yes/no）
   - inWindowPosts
-  - status（ok/failed/skipped）
+  - status（ok/failed/pending）
   - reason（若异常）
 
 ### Step 5.5：交付顺序（强制）
@@ -130,6 +138,13 @@ description: Twitter/X 专属资讯快照工作流：按账号池分批抓取新
 - 链接使用可点击 URL
 - 若模板与其他描述冲突，以 `example-output.md` 为准
 
+## 最小交付项（强制）
+每次执行完成后，报告里至少要明确给出：
+1) 一份简报（按 example-output 模板）
+2) 本轮“看到多少”（命中窗口内帖子数）
+3) 本轮“没看到多少”（无新帖/未命中账号数）
+4) 本轮时间窗口（start/end）
+
 ## 错误处理策略
 - browser evaluate/snapshot 中断：短重试一次；失败则降级到 snapshot 解析。
 - 页面要求登录：记录 `login_required`，跳过账号继续。
@@ -137,6 +152,7 @@ description: Twitter/X 专属资讯快照工作流：按账号池分批抓取新
   - 若连续 3 个账号失败，自动把并发从 6 降到 4。
   - 若继续失败，再降到 2，并输出 degraded_mode。
 - 整体超时：输出“已完成部分 + 未完成账号 + nextIndex”，保留下次续跑点。
+- 早停保护：若任务中断，仅允许把未执行账号标记到 `pendingAccounts`，不得写入 `failedAccounts`。
 
 ## 禁止事项
 - 禁止一口气跑完整账号池而不落盘。
